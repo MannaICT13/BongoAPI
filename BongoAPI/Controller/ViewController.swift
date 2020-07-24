@@ -10,11 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //MARK:- Properties
+    
+    @IBOutlet weak var myTextView: UITextView!
+    
+    
+    //MARK:- Initializers
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
-
+    
+    //MARK:- Handlers
+    @IBAction func getBtnAction(_ sender: Any) {
+    }
+    
 }
 

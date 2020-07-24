@@ -79,9 +79,11 @@
 		2A68453624CB6CC700939CD8 /* BongoAPI */ = {
 			isa = PBXGroup;
 			children = (
+				2A68455924CB6CDE00939CD8 /* Controller */,
+				2A68455A24CB6CE900939CD8 /* Model */,
+				2A68455C24CB6D1B00939CD8 /* Storyboard */,
 				2A68453724CB6CC700939CD8 /* AppDelegate.swift */,
 				2A68453924CB6CC700939CD8 /* SceneDelegate.swift */,
-				2A68453B24CB6CC700939CD8 /* ViewController.swift */,
 				2A68453D24CB6CC700939CD8 /* Main.storyboard */,
 				2A68454024CB6CCA00939CD8 /* Assets.xcassets */,
 				2A68454224CB6CCA00939CD8 /* LaunchScreen.storyboard */,
@@ -97,6 +99,28 @@
 				2A68455024CB6CCA00939CD8 /* Info.plist */,
 			);
 			path = BongoAPITests;
+			sourceTree = "<group>";
+		};
+		2A68455924CB6CDE00939CD8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2A68453B24CB6CC700939CD8 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2A68455A24CB6CE900939CD8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2A68455C24CB6D1B00939CD8 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
