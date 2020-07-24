@@ -13,8 +13,9 @@ class ViewController: UIViewController {
     //MARK:- Properties
     
     @IBOutlet weak var myTextView: UITextView!
+    @IBOutlet weak var getBtnOutlet: UIButton!
     
-    var result = String()
+    
     //MARK:- Initializers
     
     override func viewDidLoad() {

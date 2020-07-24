@@ -10,15 +10,21 @@ import Foundation
 import Alamofire
 class APIHandler {
     
+    
+    //MARK:- Properties
     static let apiHandlerInstance = APIHandler()
     weak var vc : ViewController?
   
     var responseResult = String()
     var arrayOfCharecter = [String]()
+    let url = "https://bongobd.com/disclaimer/get"
+    
+    
+    //MARK:- Handlers
     
     func getDataFromApi(){
         
-    guard let url = URL(string: "https://bongobd.com/disclaimer/get")else{return}
+    guard let url = URL(string: url)else{return}
        
         let header : HTTPHeaders = [.accept("text/html")]
         
