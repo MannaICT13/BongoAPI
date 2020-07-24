@@ -11,7 +11,10 @@ import Alamofire
 class APIHandler {
     
     static let apiHandlerInstance = APIHandler()
+    weak var vc : ViewController?
   
+    var responseResult = String()
+    var arrayOfCharecter = [String]()
     
     func getDataFromApi(){
         
@@ -26,7 +29,51 @@ class APIHandler {
                 
             }else{
                 guard let result = response.value else{return}
-              print(result)
+                self.responseResult = result
+               print(self.responseResult)
+                
+                
+               //Print the last charecter
+                
+                guard let lastCharecter = self.responseResult.last else{return}
+               // print("Print The Last Charecter : \(lastCharecter)")
+                
+                //Print Every 10th Charecter
+                
+                var count = self.responseResult.count
+                var index = 9
+           
+                while(count>9){
+                    
+                    let char = self.responseResult.stringAt(index)
+                    self.arrayOfCharecter.append(char)
+                    index = index + 10
+                    count = count - 10
+                    
+                    
+                }
+                
+                //Print the count of every word
+                
+                let words = self.responseResult.split{$0.isLetter}
+                
+                
+                
+                //Showing in the TextView
+                
+                var text =  ""
+                
+                for i in 0..<self.arrayOfCharecter.count{
+                    text += "\(self.arrayOfCharecter[i])  "
+                }
+                
+                
+                self.vc?.myTextView.text = "The last charecter:\n \(lastCharecter)\n Every 10th Charecter:\n \(text)\n The count of every word: \(words.count)"
+                
+                
+                
+                
+               
                 
             }
             
@@ -40,7 +87,18 @@ class APIHandler {
     }
     
     
+
     
     
+    
+    
+    
+}
+extension String{
+    
+    func stringAt(_ i :Int ) -> String{
+        
+        return String(Array(self)[i])
+    }
     
 }

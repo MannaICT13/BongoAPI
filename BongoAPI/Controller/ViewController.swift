@@ -19,16 +19,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        APIHandler.apiHandlerInstance.getDataFromApi()
-       
+        APIHandler.apiHandlerInstance.vc = self
+      
         
     }
 
     
     //MARK:- Handlers
     @IBAction func getBtnAction(_ sender: Any) {
-        print(result)
-        
+       
+         APIHandler.apiHandlerInstance.getDataFromApi()
         
     }
     
