@@ -14,17 +14,22 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var myTextView: UITextView!
     
-    
+    var result = String()
     //MARK:- Initializers
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        APIHandler.apiHandlerInstance.getDataFromApi()
+       
         
     }
 
     
     //MARK:- Handlers
     @IBAction func getBtnAction(_ sender: Any) {
+        print(result)
+        
+        
     }
     
 }
